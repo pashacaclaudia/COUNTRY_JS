@@ -3,7 +3,7 @@ var router = express.Router(); //Ottiene un oggetto router
 var country = require('countryjs');
 
 router.get('/info/:state/', function(req, res, next){ //Rendiamo lo stato un parametro
- res.send(req.params);
+ res.send(country.info(req.params.state));
 })
 
 module.exports = router;
